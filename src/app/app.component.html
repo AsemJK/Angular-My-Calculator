@@ -1,0 +1,201 @@
+<div class="min-w-screen min-h-screen bg-red-300 flex items-center justify-center px-5 py-5">
+  <div class="w-full mx-auto rounded-xl shadow-xl text-gray-600 relative overflow-hidden max-w-[350px]">
+    <h1 class="text-center text-white py-10 text-3xl font-bold">
+      My Calculator
+    </h1>
+    <!-- result screen -->
+    <div class="w-full h-40 bg-gradient-to-b from-slate-300 to-slate-500 text-right">
+      <!-- function screen -->
+      <div class="w-full py-5 px-6 text-2xl text-white font-thin">
+        {{funT}}
+      </div>
+      <!-- result number screen -->
+      <div class="py-5 px-6 text-white text-6xl font-thin">
+        {{calVal}}
+      </div>
+    </div>
+    <!-- callculator buttons are -->
+    <div class="w-full bg-gradient-to-b from-blue-200 to-blue-600">
+      <!-- first row buttons -->
+      <div class="flex w-full">
+        <!-- clear button -->
+        <div class="w-2/4 border-r border-b border-blue-600">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                text-white text-xl font-light"
+                (click)="onClickValue('c','function')">
+            C
+          </button>
+        </div>
+        <!-- percentage button -->
+        <div class="w-1/4 border-r border-b border-blue-600">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                text-white text-xl font-light"
+                (click)="onClickValue('%','function')">
+            %
+          </button>
+        </div>
+        <!-- division button -->
+        <div class="w-1/4 border-r border-b border-blue-600">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                text-white text-xl font-light"
+                (click)="onClickValue('/','function')">
+            /
+          </button>
+        </div>
+      </div>
+      <!-- end first buttons row -->
+
+      <!-- start second row -->
+      <div class="flex w-full">
+
+        <!-- number 7 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                text-white text-xl font-light"
+                (click)="onClickValue('7','number')">
+            7
+          </button>
+        </div>
+        <!-- number 8 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                text-white text-xl font-light"
+                (click)="onClickValue('8','number')">
+            8
+          </button>
+        </div>
+        <!-- number 9 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                text-white text-xl font-light"
+                (click)="onClickValue('9','number')">
+            9
+          </button>
+        </div>
+        <!-- multiply -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                text-white text-xl font-light"
+                (click)="onClickValue('*','function')">
+            *
+          </button>
+        </div>
+
+      </div>
+      <!-- end of second row -->
+
+      <!-- start third row -->
+      <div class="flex w-full">
+
+        <!-- number 4 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                      text-white text-xl font-light"
+                      (click)="onClickValue('4','number')">
+            4
+          </button>
+        </div>
+        <!-- number 5 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                      text-white text-xl font-light"
+                      (click)="onClickValue('5','number')">
+            5
+          </button>
+        </div>
+        <!-- number 6 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                      text-white text-xl font-light"
+                      (click)="onClickValue('6','number')">
+            6
+          </button>
+        </div>
+        <!-- minus -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                      text-white text-xl font-light"
+                      (click)="onClickValue('-','function')">
+            -
+          </button>
+        </div>
+
+      </div>
+      <!-- end of third row -->
+
+      <!-- start fourth row -->
+      <div class="flex w-full">
+
+        <!-- number 1 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                            text-white text-xl font-light"
+                            (click)="onClickValue('1','number')">
+            1
+          </button>
+        </div>
+        <!-- number 2 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                            text-white text-xl font-light"
+                            (click)="onClickValue('2','number')">
+            2
+          </button>
+        </div>
+        <!-- number 3 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                            text-white text-xl font-light"
+                            (click)="onClickValue('3','number')">
+            3
+          </button>
+        </div>
+        <!-- plus button -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                            text-white text-xl font-light"
+                            (click)="onClickValue('+','function')">
+            +
+          </button>
+        </div>
+
+      </div>
+      <!-- end of fourth row -->
+
+      <!-- start fifth row -->
+      <div class="flex w-full">
+
+        <!-- number 0 -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                                  text-white text-xl font-light"
+                                  (click)="onClickValue('0','number')">
+            0
+          </button>
+        </div>
+        <!-- decimal point . -->
+        <div class="w-1/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                                  text-white text-xl font-light"
+                                  (click)="onClickValue('.','number')">
+            .
+          </button>
+        </div>
+        <!-- equal sign -->
+        <div class="w-2/4 border-r border-b border-blue-400">
+          <button class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-20
+                                  text-white text-xl font-light"
+                                  (click)="onClickValue('=','function')">
+            =
+          </button>
+        </div>
+
+
+      </div>
+      <!-- end of fourth row -->
+
+    </div>
+    <!-- end calculator area -->
+  </div>
+
+</div>
